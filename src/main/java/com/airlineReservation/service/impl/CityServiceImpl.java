@@ -47,6 +47,10 @@ public class CityServiceImpl implements CityService {
 
     @Override
     public void deleteCity(Long id) {
+        log.trace("deleteCity --- method entered");
 
+        cityRepo.deleteById(id);
+
+        log.trace("deleted city: city={}", id);
     }
 }
