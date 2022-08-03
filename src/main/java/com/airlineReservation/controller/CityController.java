@@ -34,4 +34,11 @@ public class CityController {
 
         cityService.addCity(city);
     }
+
+    @DeleteMapping
+    void deleteCity(@RequestParam Long id) {
+        cityService.deleteCity(id);
+
+        log.trace("deleted city:{}", id);
+    }
 }
