@@ -19,4 +19,8 @@ public class Airport {
     @Column
     @OneToMany (mappedBy = "airport")
     public Set<Flight> flights = new HashSet<>();
+
+    @ManyToOne
+    @JoinColumn(name = "city_id")
+    private City city;
 }

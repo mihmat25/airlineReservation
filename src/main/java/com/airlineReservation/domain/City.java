@@ -17,6 +17,9 @@ public class City {
     private Integer id;
 
     @Column
+    private String name;
+
+    @Column
     @OneToMany(mappedBy = "city")
     private Set<Airport> airports = new HashSet<>();
 }

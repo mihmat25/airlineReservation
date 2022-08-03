@@ -16,4 +16,12 @@ public class Flight {
 
     @Column
     private Planes plane;
+
+    @ManyToOne
+    @JoinColumn(name = "airport_id")
+    private Airport airport;
+
+    @ManyToOne
+    @JoinColumn(name = "profile_id")
+    private Profile profile;
 }
